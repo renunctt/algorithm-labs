@@ -1,1 +1,1 @@
-# algorithm-labs-8
+# algorithm-labs
