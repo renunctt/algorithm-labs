@@ -106,6 +106,29 @@ void print_nums_index(int *nums) {
     cout << "index: " << i << " number: " << nums[i++] << '\n';
 }
 
+void print_simetria_nums(int * nums) {
+  int i = 0;
+  while (i < length)
+    cout << nums[i++] << ' ';
+  i--;
+  while (-1 < i)
+    cout << nums[i--] << ' ';
+  cout << '\n';
+}
+
+void summ_index_nums(int *nums) {
+  int k1, k2, summ, i;
+  cout << "(k1, k2): ";
+  cin >> k1 >> k2;
+  summ = i = 0;
+  while (i < length) {
+    if (i++ > k1 && k2 < i)
+      continue;
+    summ += nums[i];
+  }
+  cout << "summ: " << summ << '\n';
+}
+
 int main() {
   cin >> length;
   int *nums = input_nums();
@@ -120,4 +143,6 @@ int main() {
   isNumsSimetria(nums);
   print_nums_index(nums);
   cout << "min index: 0 number: " << nums[0] << '\n';
+  print_simetria_nums(nums);
+  summ_index_nums(nums);
 }
