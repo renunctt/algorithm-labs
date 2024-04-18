@@ -73,4 +73,13 @@ int main() {
       if (d == j)
         summ += M.at(i, j);
   cout << summ << "\n\n";
+
+  cout << "9. Scope diagonal summ\n";
+  summ = 0;
+  d = r - 1;
+  for (int i = 0; i < c; ++i, --d)
+    for (int j = 0; j < r; ++j)
+      if (d == j)
+        summ += M.at(i, j);
+  cout << summ << "\n\n";
 }
