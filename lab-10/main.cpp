@@ -32,8 +32,16 @@ int main() {
   cout << "4. Reverse matrix row\n";
   matrix reverse_row(c, r);
   int r_index = c - 1;
-  for (int index = 0; index < c; ++index, --r_index)
+  for (int i = 0; i < c; ++i, --r_index)
     for (int j = 0; j < r; ++j)
-      reverse_row.at(r_index, j) = M.at(index, j);
+      reverse_row.at(r_index, j) = M.at(i, j);
   reverse_row.println();
+  
+  cout << "5. Reverse matrix col\n";
+  matrix reverse_col(c, r);
+  int c_index = r - 1;
+  for (int i = 0; i < r; ++i, --c_index)
+    for (int j = 0; j < c; ++j)
+      reverse_col.at(j, c_index) = M.at(j, i);
+  reverse_col.println();
 }
