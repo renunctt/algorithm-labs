@@ -24,9 +24,9 @@ int matrix::summ() {
   return res;
 }
 
-int matrix::summ_row(int row) {
+int matrix::summ_row(int col) {
   int res = 0;
   for (int i = 0; i < cols; ++i)
-    res += data[i][row];
+    res += data[col][i];
   return res;
 }
