@@ -28,4 +28,12 @@ int main() {
     cols_summ[i] = M.summ_col(i);
   sort(cols_summ, r);
   print_array(cols_summ, r);
+
+  cout << "4. Reverse matrix row\n";
+  matrix reverse_row(c, r);
+  int r_index = c - 1;
+  for (int index = 0; index < c; ++index, --r_index)
+    for (int j = 0; j < r; ++j)
+      reverse_row.at(r_index, j) = M.at(index, j);
+  reverse_row.println();
 }
