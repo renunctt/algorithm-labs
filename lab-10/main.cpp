@@ -64,4 +64,13 @@ int main() {
     cout << max << ' ';
   }
   cout << "\n\n";
+
+  cout << "8. Diagonal summ\n";
+  int summ, d;
+  summ = d = 0;
+  for (int i = 0; i < c; ++i, ++d)
+    for (int j = 0; j < r; ++j)
+      if (d == j)
+        summ += M.at(i, j);
+  cout << summ << "\n\n";
 }
