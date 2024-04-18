@@ -1,4 +1,5 @@
 #include "matrix.h"
+#include <iostream>
 
 matrix::matrix(int cols, int rows) {
   this->cols = cols;
@@ -36,4 +37,13 @@ int matrix::summ_col(int row) {
   for (int i = 0; i < cols; ++i)
     res += data[i][row];
   return res;
+}
+
+void matrix::println() {
+  for (int i = 0; i < cols; ++i) {
+    for (int j = 0; j < rows; ++j)
+      std::cout << data[i][j] << ' ';
+    std::cout << '\n';
+  }
+  std::cout << '\n';
 }

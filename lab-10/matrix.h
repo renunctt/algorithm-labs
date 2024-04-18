@@ -13,6 +13,7 @@ public:
   int summ();
   int summ_row(int col);
   int summ_col(int row);
+  void println();
 };
 
 #endif
