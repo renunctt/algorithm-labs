@@ -14,5 +14,5 @@ void sort(int *array, int length) {
 void print_array(int *array, int length) {
   for (int i = 0; i < length; ++i)
     std::cout << array[i] << ' ';
-  std::cout << '\n';
+  std::cout << "\n\n";
 }

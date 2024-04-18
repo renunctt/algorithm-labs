@@ -13,7 +13,7 @@ int main() {
       cin >> M.at(i, j);
 
   cout << "1. Summ matrix\n";
-  cout << M.summ() << '\n';
+  cout << M.summ() << "\n\n";
 
   cout << "2. Sort matrix by row summ\n";
   int *rows_summ = new int[c];
@@ -36,7 +36,7 @@ int main() {
     for (int j = 0; j < r; ++j)
       reverse_row.at(r_index, j) = M.at(i, j);
   reverse_row.println();
-  
+
   cout << "5. Reverse matrix col\n";
   matrix reverse_col(c, r);
   int c_index = r - 1;
@@ -44,4 +44,24 @@ int main() {
     for (int j = 0; j < c; ++j)
       reverse_col.at(j, c_index) = M.at(j, i);
   reverse_col.println();
+
+  cout << "6. Matrix min row\n";
+  for (int i = 0; i < c; ++i) {
+    int min = M.at(i, 0);
+    for (int j = 1; j < r; ++j)
+      if (min > M.at(i, j))
+        min = M.at(i, j);
+    cout << min << '\n';
+  }
+  cout << '\n';
+
+  cout << "7. Matrix max col\n";
+  for (int i = 0; i < r; ++i) {
+    int max = M.at(0, i);
+    for (int j = 0; j < c; ++j)
+      if (max < M.at(j, i))
+        max = M.at(j, i);
+    cout << max << ' ';
+  }
+  cout << "\n\n";
 }
