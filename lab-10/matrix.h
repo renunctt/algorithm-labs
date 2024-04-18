@@ -11,6 +11,7 @@ public:
   int &at(int col, int row);
   ~matrix();
   int summ();
+  int summ_row(int row);
 };
 
 #endif
