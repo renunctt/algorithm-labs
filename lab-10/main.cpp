@@ -1,16 +1,7 @@
 #include "matrix.h"
+#include "utilities.h"
 #include <iostream>
 using namespace std;
-
-void sort(int *array, int length) {
-  for (int i = 0; i < length - 1; ++i)
-    for (int j = i + 1; j < length; ++j)
-      if (array[i] > array[j]) {
-        int temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
-      }
-}
 
 int main() {
   int c, r;
@@ -29,7 +20,12 @@ int main() {
   for (int i = 0; i < c; ++i)
     rows_summ[i] = M.summ_row(i);
   sort(rows_summ, c);
-  for (int i = 0; i < c; ++i)
-    cout << rows_summ[i] << ' ';
-  cout << '\n';
+  print_array(rows_summ, c);
+
+  cout << "3. Sort matrix by col summ\n";
+  int *cols_summ = new int[r];
+  for (int i = 0; i < r; ++i)
+    cols_summ[i] = M.summ_col(i);
+  sort(cols_summ, r);
+  print_array(cols_summ, r);
 }

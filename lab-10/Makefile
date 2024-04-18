@@ -2,8 +2,8 @@
 
 all: build
 
-build: main.cpp matrix.cpp matrix.h
-	clang++ main.cpp matrix.cpp -o main.o
+build: main.cpp matrix.cpp matrix.h utilities.cpp utilities.h
+	clang++ main.cpp matrix.cpp utilities.cpp -o main.o
 
 clean:
 	rm -rf main.o
