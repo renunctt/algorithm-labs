@@ -26,7 +26,7 @@ int matrix::summ() {
 
 int matrix::summ_row(int col) {
   int res = 0;
-  for (int i = 0; i < cols; ++i)
+  for (int i = 0; i < rows; ++i)
     res += data[col][i];
   return res;
 }
