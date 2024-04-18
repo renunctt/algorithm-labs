@@ -30,3 +30,10 @@ int matrix::summ_row(int col) {
     res += data[col][i];
   return res;
 }
+
+int matrix::summ_col(int row) {
+  int res = 0;
+  for (int i = 0; i < cols; ++i)
+    res += data[i][row];
+  return res;
+}
