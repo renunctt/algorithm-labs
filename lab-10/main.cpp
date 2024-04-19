@@ -82,4 +82,11 @@ int main() {
       if (d == j)
         summ += M.at(i, j);
   cout << summ << "\n\n";
+
+  cout << "10. Matrix transporter\n";
+  matrix transporter_m(r, c);
+  for (int i = 0; i < c; ++i)
+    for (int j = 0; j < r; ++j)
+      transporter_m.at(j, i) = M.at(i, j);
+  transporter_m.println();
 }
